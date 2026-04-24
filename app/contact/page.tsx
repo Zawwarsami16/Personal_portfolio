@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
-import { MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Github, Linkedin, Twitter, Hexagon, Newspaper } from "lucide-react";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Tag } from "@/components/ui/Pill";
@@ -83,6 +83,16 @@ export default function ContactPage() {
                     href={site.socials.twitter}
                     label="Twitter"
                     icon={<Twitter className="h-4 w-4" />}
+                  />
+                  <Social
+                    href={site.socials.substack}
+                    label="Substack"
+                    icon={<Newspaper className="h-4 w-4" />}
+                  />
+                  <Social
+                    href={site.socials.htb}
+                    label="Hack The Box"
+                    icon={<Hexagon className="h-4 w-4" />}
                   />
                 </div>
               </div>

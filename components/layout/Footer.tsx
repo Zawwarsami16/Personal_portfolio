@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Mail, MapPin, CircleDot, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, CircleDot, Github, Linkedin, Twitter, Hexagon, Newspaper } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { site } from "@/lib/site";
 
@@ -85,6 +85,12 @@ export function Footer() {
             </SocialIcon>
             <SocialIcon href={site.socials.twitter} label="Twitter">
               <Twitter className="h-4 w-4" />
+            </SocialIcon>
+            <SocialIcon href={site.socials.substack} label="Substack">
+              <Newspaper className="h-4 w-4" />
+            </SocialIcon>
+            <SocialIcon href={site.socials.htb} label="Hack The Box">
+              <Hexagon className="h-4 w-4" />
             </SocialIcon>
             <Link
               href="/contact"
