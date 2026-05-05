@@ -2,7 +2,7 @@
 
 My personal site — work, writing, and the projects I'm building under [Anteroom Studio](https://github.com/anteroom-studio).
 
-Live at: _coming soon_.
+**Live: [zawwar-sami.vercel.app](https://zawwar-sami.vercel.app)**
 
 ## Run it locally
 
