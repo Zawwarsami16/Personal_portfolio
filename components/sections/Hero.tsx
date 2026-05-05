@@ -25,22 +25,49 @@ export function Hero() {
     <section
       ref={ref}
       id="hero"
-      className="relative isolate flex min-h-[100svh] w-full flex-col overflow-hidden pt-32 pb-20 lg:pt-40"
+      className="relative isolate w-full overflow-hidden pt-24 pb-20 lg:flex lg:min-h-[100svh] lg:flex-col lg:pt-40"
     >
+      {/* Mobile: in-flow orb frame at the top.
+          Desktop: full-bleed overlay anchored right. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-0"
+        className="relative mx-auto aspect-[4/3] w-full max-w-[640px] overflow-hidden sm:aspect-[16/10] lg:absolute lg:inset-0 lg:left-[22%] lg:z-0 lg:mx-0 lg:aspect-auto lg:h-auto lg:max-w-none"
         style={{ willChange: "transform" }}
       >
-        <div className="absolute inset-0 lg:left-[22%]">
-          <VideoLoop
-            src="/video/hero.mp4"
-            position="right center"
-            className="h-full w-full"
-            preload="auto"
-          />
-        </div>
+        <VideoLoop
+          src="/video/hero.mp4"
+          className="h-full w-full [object-position:50%_30%] lg:[object-position:right_center]"
+          preload="auto"
+        />
 
+        {/* Mobile-only fade so the orb melts into the bg before the headline starts. */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-1/2 lg:hidden"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 0%, rgba(7,7,10,0.55) 55%, var(--color-bg) 100%)",
+          }}
+        />
+        {/* Side fades on mobile so the orb is framed cleanly. */}
+        <div
+          className="absolute inset-y-0 left-0 w-12 lg:hidden"
+          style={{
+            background: "linear-gradient(to right, var(--color-bg) 0%, transparent 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-y-0 right-0 w-12 lg:hidden"
+          style={{
+            background: "linear-gradient(to left, var(--color-bg) 0%, transparent 100%)",
+          }}
+        />
+      </div>
+
+      {/* Desktop-only background system: corner vignette + left reading gradient + parallax. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 hidden lg:block"
+      >
         <div
           className="absolute inset-0"
           style={{
@@ -48,21 +75,19 @@ export function Hero() {
               "radial-gradient(ellipse 130% 110% at 70% 45%, transparent 0%, transparent 60%, var(--color-bg) 96%)",
           }}
         />
-
         <div
-          className="absolute inset-y-0 left-0 hidden lg:block lg:w-1/2"
+          className="absolute inset-y-0 left-0 lg:w-1/2"
           style={{
             background:
               "linear-gradient(to right, var(--color-bg) 0%, rgba(7,7,10,0.85) 38%, rgba(7,7,10,0.35) 65%, transparent 100%)",
           }}
         />
-
         <ParallaxLayers />
       </div>
 
       <motion.div
         style={{ opacity: fadeText, y: liftText }}
-        className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-1 flex-col px-6 lg:px-12"
+        className="relative z-10 mx-auto mt-10 flex w-full max-w-[1440px] flex-col px-6 sm:mt-14 lg:mt-0 lg:flex-1 lg:px-12"
       >
         <motion.div
           initial={{ opacity: 0, x: -10 }}
@@ -75,7 +100,7 @@ export function Hero() {
           <span aria-hidden>{"//"}</span>
         </motion.div>
 
-        <h1 className="text-balance font-serif text-[clamp(56px,9vw,140px)] leading-[0.95] tracking-tight font-light text-[var(--color-fg)]">
+        <h1 className="text-balance font-serif text-[clamp(40px,11vw,140px)] leading-[0.96] tracking-tight font-light text-[var(--color-fg)] sm:text-[clamp(56px,9vw,140px)]">
           <span className="block">
             <ScrambleText text="Building" delay={0.4} duration={1.0} />
           </span>

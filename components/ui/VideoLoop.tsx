@@ -8,7 +8,7 @@ type Props = {
   src: string;
   poster?: string;
   className?: string;
-  /** Where the video sits in its container — controls object-position for cropping. */
+  /** Inline object-position. Leave unset to control via Tailwind classes (e.g. responsive). */
   position?: string;
   /** Optional opacity, for subtle background loops. */
   opacity?: number;
@@ -20,7 +20,7 @@ export function VideoLoop({
   src,
   poster,
   className,
-  position = "center",
+  position,
   opacity = 1,
   preload = "metadata",
 }: Props) {
@@ -70,7 +70,7 @@ export function VideoLoop({
         ready ? "opacity-100" : "opacity-0",
         className,
       )}
-      style={{ objectPosition: position, opacity }}
+      style={position ? { objectPosition: position, opacity } : { opacity }}
     />
   );
 }
