@@ -1,0 +1,38 @@
+export const site = {
+  name: "Zawwar Sami",
+  shortName: "ZS",
+  role: "Engineer · Builder of ZAI",
+  email: "zawwarsami16@gmail.com",
+  location: {
+    city: "Mississauga",
+    region: "Ontario",
+    country: "Canada",
+    label: "Mississauga, Canada",
+    coords: "43.5890° N, 79.6441° W",
+    lat: 43.589,
+    lng: -79.6441,
+    timezone: "America/Toronto",
+  },
+  studio: {
+    name: "Anteroom Studio",
+    tagline: "the room before the room",
+    foundedYear: "2019",
+    url: "https://github.com/anteroom-studio",
+  },
+  socials: {
+    github: "https://github.com/Zawwarsami16",
+    githubOrg: "https://github.com/anteroom-studio",
+    linkedin: "https://www.linkedin.com/in/zawwarsami",
+    twitter: "https://twitter.com/Kh4nZawwar",
+  },
+  nav: [
+    { label: "About", href: "/about" },
+    { label: "Stack", href: "/stack" },
+    { label: "Work", href: "/work" },
+    { label: "Contact", href: "/contact" },
+  ],
+  status: {
+    available: true,
+    label: "Available for new opportunities",
+  },
+} as const;
