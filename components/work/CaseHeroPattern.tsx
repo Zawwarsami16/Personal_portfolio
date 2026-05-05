@@ -1,0 +1,104 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+type Pattern = "rings" | "grid" | "wave";
+
+export function CaseHeroPattern({ pattern }: { pattern: Pattern }) {
+  if (pattern === "grid") return <GridPattern />;
+  if (pattern === "wave") return <WavePattern />;
+  return <RingsPattern />;
+}
+
+function RingsPattern() {
+  return (
+    <svg
+      viewBox="0 0 600 400"
+      preserveAspectRatio="xMidYMid slice"
+      className="absolute inset-0 h-full w-full text-[var(--color-accent)]"
+      aria-hidden
+    >
+      <defs>
+        <radialGradient id="rg" cx="60%" cy="50%" r="55%">
+          <stop offset="0%" stopColor="currentColor" stopOpacity="0.6" />
+          <stop offset="60%" stopColor="currentColor" stopOpacity="0.06" />
+          <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="600" height="400" fill="url(#rg)" />
+      {[40, 80, 130, 190, 260].map((r, i) => (
+        <motion.circle
+          key={r}
+          cx="380"
+          cy="200"
+          r={r}
+          stroke="currentColor"
+          strokeWidth="0.8"
+          fill="none"
+          opacity={0.6 - i * 0.08}
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+        />
+      ))}
+      <circle cx="380" cy="200" r="6" fill="currentColor" />
+    </svg>
+  );
+}
+
+function GridPattern() {
+  return (
+    <svg
+      viewBox="0 0 600 400"
+      preserveAspectRatio="xMidYMid slice"
+      className="absolute inset-0 h-full w-full text-[var(--color-accent)]"
+      aria-hidden
+    >
+      <defs>
+        <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+          <path d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+        </pattern>
+        <radialGradient id="gridGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="currentColor" stopOpacity="0.55" />
+          <stop offset="60%" stopColor="currentColor" stopOpacity="0.05" />
+          <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="600" height="400" fill="url(#grid)" />
+      <rect width="600" height="400" fill="url(#gridGlow)" />
+    </svg>
+  );
+}
+
+function WavePattern() {
+  return (
+    <svg
+      viewBox="0 0 600 400"
+      preserveAspectRatio="xMidYMid slice"
+      className="absolute inset-0 h-full w-full text-[var(--color-accent)]"
+      aria-hidden
+    >
+      <defs>
+        <radialGradient id="wg" cx="50%" cy="100%" r="80%">
+          <stop offset="0%" stopColor="currentColor" stopOpacity="0.5" />
+          <stop offset="60%" stopColor="currentColor" stopOpacity="0.05" />
+          <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="600" height="400" fill="url(#wg)" />
+      {[140, 180, 220, 260, 300].map((y, i) => (
+        <motion.path
+          key={y}
+          d={`M -50 ${y} Q 150 ${y - 30} 300 ${y} T 650 ${y}`}
+          stroke="currentColor"
+          strokeWidth="0.8"
+          fill="none"
+          opacity={0.5 - i * 0.07}
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.6, delay: i * 0.08 }}
+        />
+      ))}
+    </svg>
+  );
+}
