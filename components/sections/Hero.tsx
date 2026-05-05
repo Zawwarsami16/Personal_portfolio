@@ -5,10 +5,11 @@ import { useRef } from "react";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { StatusPill } from "@/components/ui/Pill";
-import { SplitText } from "@/components/ui/SplitText";
+import { ScrambleText } from "@/components/ui/ScrambleText";
 import { StatusBar } from "@/components/layout/StatusBar";
 import { CoordinatesHUD } from "@/components/layout/CoordinatesHUD";
 import { VideoLoop } from "@/components/ui/VideoLoop";
+import { ParallaxLayers } from "@/components/hero/ParallaxLayers";
 import { site } from "@/lib/site";
 
 export function Hero() {
@@ -55,6 +56,8 @@ export function Hero() {
               "linear-gradient(to right, var(--color-bg) 0%, rgba(7,7,10,0.85) 38%, rgba(7,7,10,0.35) 65%, transparent 100%)",
           }}
         />
+
+        <ParallaxLayers />
       </div>
 
       <motion.div
@@ -73,16 +76,14 @@ export function Hero() {
         </motion.div>
 
         <h1 className="text-balance font-serif text-[clamp(56px,9vw,140px)] leading-[0.95] tracking-tight font-light text-[var(--color-fg)]">
-          <span className="block overflow-hidden">
-            <SplitText text="Building" delay={0.6} staggerChildren={0.08} />
+          <span className="block">
+            <ScrambleText text="Building" delay={0.4} duration={1.0} />
           </span>
-          <span className="block overflow-hidden">
-            <SplitText text="thoughtful" delay={0.8} staggerChildren={0.06} />
+          <span className="block">
+            <ScrambleText text="thoughtful" delay={0.7} duration={1.1} />
           </span>
-          <span className="block overflow-hidden">
-            <span className="font-serif-italic text-[var(--color-accent)]">
-              <SplitText text="digital systems." delay={1.05} staggerChildren={0.05} />
-            </span>
+          <span className="block font-serif-italic text-[var(--color-accent)]">
+            <ScrambleText text="digital systems." delay={1.0} duration={1.3} />
           </span>
         </h1>
 
