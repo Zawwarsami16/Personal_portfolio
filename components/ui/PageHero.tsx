@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { SectionTag } from "./Pill";
 import { SplitText } from "./SplitText";
+import { MagneticHeading } from "./MagneticHeading";
 import { CoordinatesHUD } from "@/components/layout/CoordinatesHUD";
 
 type Props = {
@@ -43,11 +44,14 @@ export function PageHero({ tag, title, italic, description, align = "left" }: Pr
             <SplitText text={title} delay={0.2} staggerChildren={0.06} />
           </span>
           {italic && (
-            <span className="block overflow-hidden">
-              <span className="font-serif-italic text-[var(--color-accent)]">
-                <SplitText text={italic} delay={0.45} staggerChildren={0.05} />
-              </span>
-            </span>
+            <motion.span
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-[var(--color-accent)]"
+            >
+              <MagneticHeading text={italic} italic />
+            </motion.span>
           )}
         </h1>
 

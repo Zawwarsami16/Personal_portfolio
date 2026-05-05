@@ -2,6 +2,7 @@
 
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionTag } from "@/components/ui/Pill";
+import { MagneticHeading } from "@/components/ui/MagneticHeading";
 import { fadeUp, stagger } from "@/lib/motion";
 import { motion } from "framer-motion";
 
@@ -24,11 +25,11 @@ export function About() {
           className="text-balance font-serif text-[clamp(36px,5vw,80px)] leading-[1.05] tracking-tight font-light text-[var(--color-fg)] lg:col-span-7"
         >
           I build with{" "}
-          <span className="font-serif-italic text-[var(--color-accent)]">clarity</span>,
+          <MagneticHeading text="clarity" italic className="text-[var(--color-accent)]" />,
           <br className="hidden md:block" /> engineer with{" "}
-          <span className="font-serif-italic text-[var(--color-accent)]">purpose</span>,
+          <MagneticHeading text="purpose" italic className="text-[var(--color-accent)]" />,
           <br className="hidden md:block" /> and ship with{" "}
-          <span className="font-serif-italic text-[var(--color-accent)]">care</span>.
+          <MagneticHeading text="care" italic className="text-[var(--color-accent)]" />.
         </motion.h2>
 
         <motion.div
