@@ -4,6 +4,7 @@ import { MotionConfig } from "framer-motion";
 import { MouseProvider } from "@/components/system/MouseProvider";
 import { SmoothScroll } from "@/components/system/SmoothScroll";
 import { Cursor } from "@/components/system/Cursor";
+import { CommandPalette } from "@/components/system/CommandPalette";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -12,6 +13,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <SmoothScroll>
           {children}
           <Cursor />
+          <CommandPalette />
         </SmoothScroll>
       </MouseProvider>
     </MotionConfig>

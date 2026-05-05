@@ -78,8 +78,20 @@ export function Nav() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <button
+              type="button"
+              aria-label="Open command palette"
+              data-cursor="hover"
+              onClick={() => {
+                window.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }));
+              }}
+              className="hidden h-9 items-center gap-2 rounded-md border border-[var(--color-line)] bg-[var(--color-surface)]/60 px-3 font-mono text-[10px] tracking-[0.25em] text-[var(--color-fg-dim)] uppercase backdrop-blur-sm transition-colors hover:border-[var(--color-accent)]/60 hover:text-[var(--color-accent)] lg:inline-flex"
+            >
+              <span>Search</span>
+              <kbd className="rounded border border-[var(--color-line)] bg-[var(--color-bg)] px-1.5 py-0.5 text-[9px]">/</kbd>
+            </button>
             <Button href="/contact" variant="primary" className="hidden md:inline-flex">
-              Let's Connect
+              Let&apos;s Connect
             </Button>
             <button
               type="button"
