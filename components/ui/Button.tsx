@@ -29,14 +29,15 @@ type AsButton = Common &
 type Props = AsLink | AsButton;
 
 const baseClasses =
-  "group/btn relative inline-flex items-center gap-3 px-7 py-4 font-mono text-[11px] tracking-[0.3em] uppercase select-none transition-colors";
+  "group/btn relative inline-flex items-center gap-3 px-7 py-4 font-mono text-[11px] tracking-[0.3em] uppercase select-none transition-all duration-300";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-[var(--color-accent)] text-[var(--color-bg)] hover:bg-[var(--color-accent-bright)]",
-  ghost: "text-[var(--color-fg)] hover:text-[var(--color-accent)]",
+    "bg-[var(--color-accent)] text-[var(--color-bg)] shadow-[0_0_0_rgba(220,38,38,0)] hover:bg-[var(--color-accent-bright)] hover:shadow-[0_0_32px_rgba(220,38,38,0.45)]",
+  ghost:
+    "border border-[var(--color-line)] bg-[var(--color-surface)]/60 text-[var(--color-fg)] backdrop-blur-sm hover:border-[var(--color-accent)]/60 hover:bg-[var(--color-accent)]/[0.08] hover:text-[var(--color-accent)]",
   outline:
-    "border border-[var(--color-line)] text-[var(--color-fg)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]",
+    "border border-[var(--color-fg-dim)]/40 text-[var(--color-fg)] hover:border-[var(--color-accent)] hover:bg-[var(--color-accent)]/[0.08] hover:text-[var(--color-accent)] hover:shadow-[0_0_24px_rgba(220,38,38,0.18)]",
 };
 
 function Inner({ children, icon }: { children: ReactNode; icon: ReactNode | false | undefined }) {
@@ -48,7 +49,7 @@ function Inner({ children, icon }: { children: ReactNode; icon: ReactNode | fals
           aria-hidden
           className="relative z-10 inline-flex"
           initial={{ x: 0 }}
-          whileHover={{ x: 3 }}
+          whileHover={{ x: 4 }}
         >
           {icon ?? <ArrowRight className="h-3.5 w-3.5" strokeWidth={1.5} />}
         </motion.span>
@@ -87,9 +88,7 @@ export function Button(props: Props) {
     );
   }
 
-  // Button case
-  const { type = "button", onClick, disabled, "aria-label": ariaLabel } =
-    props as AsButton;
+  const { type = "button", onClick, disabled, "aria-label": ariaLabel } = props as AsButton;
   return (
     <Magnetic strength={0.18}>
       <button
