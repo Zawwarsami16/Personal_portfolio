@@ -47,7 +47,8 @@ export function SelectedWork() {
             <Link
               href={`/work/${c.slug}`}
               className="group relative flex flex-col gap-6 py-10 lg:flex-row lg:items-center lg:gap-12 lg:py-14"
-              data-cursor="hover"
+              data-cursor="card"
+              data-cursor-label="Open"
             >
               {/* Index */}
               <span className="font-mono text-[10px] tracking-[0.3em] text-[var(--color-muted)] uppercase lg:w-12">

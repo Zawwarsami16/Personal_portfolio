@@ -18,7 +18,8 @@ export function CaseCard({ study, index }: { study: CaseStudy; index: number }) 
     >
       <Link
         href={`/work/${study.slug}`}
-        data-cursor="hover"
+        data-cursor="card"
+        data-cursor-label="Read case study"
         className="block"
       >
         <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-[var(--color-line)] bg-[var(--color-surface)] transition-colors group-hover:border-[var(--color-accent)]/40">
