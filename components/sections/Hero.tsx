@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { StatusPill } from "@/components/ui/Pill";
 import { ScrambleText } from "@/components/ui/ScrambleText";
@@ -36,6 +36,7 @@ export function Hero() {
       >
         <VideoLoop
           src="/video/hero.mp4"
+          poster="/images/hero-poster.jpg"
           className="h-full w-full [object-position:50%_30%] lg:[object-position:right_center]"
           preload="auto"
         />
@@ -133,8 +134,8 @@ export function Hero() {
             <Button href="/contact" variant="primary" icon={<ArrowRight className="h-3.5 w-3.5" strokeWidth={1.5} />}>
               Let's Connect
             </Button>
-            <Button href="/resume.pdf" variant="ghost" icon={<Download className="h-3.5 w-3.5" strokeWidth={1.5} />} external>
-              View Resume
+            <Button href="/work" variant="ghost" icon={<ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.5} />}>
+              View Work
             </Button>
           </motion.div>
         </div>

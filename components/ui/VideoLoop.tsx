@@ -67,7 +67,9 @@ export function VideoLoop({
       aria-hidden
       className={cn(
         "h-full w-full object-cover transition-opacity duration-700",
-        ready ? "opacity-100" : "opacity-0",
+        // When a poster is set the element is never blank — keep it visible
+        // immediately so the poster shows while metadata is still loading.
+        ready || poster ? "opacity-100" : "opacity-0",
         className,
       )}
       style={position ? { objectPosition: position, opacity } : { opacity }}
