@@ -35,6 +35,7 @@ export function StructuredData() {
           site.socials.githubOrg,
           site.socials.linkedin,
           site.socials.twitter,
+          site.socials.substack,
         ],
         knowsAbout: [
           "Artificial Intelligence",

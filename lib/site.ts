@@ -24,6 +24,7 @@ export const site = {
     githubOrg: "https://github.com/anteroom-studio",
     linkedin: "https://www.linkedin.com/in/zawwarsami",
     twitter: "https://twitter.com/Kh4nZawwar",
+    substack: "https://zawwarsami.substack.com",
   },
   nav: [
     { label: "About", href: "/about" },
