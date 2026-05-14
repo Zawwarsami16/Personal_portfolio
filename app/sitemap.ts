@@ -3,6 +3,12 @@ import { caseStudies } from "./work/_data";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://zawwarsami.com";
 
+// Build-time static generation — sitemap is fully static at deploy
+// time, served as a regular cached file from the edge. Avoids the
+// dynamic-route latency that made Googlebot's first fetch fail.
+export const dynamic = "force-static";
+export const revalidate = 86400; // rebuild once a day if revalidated
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
