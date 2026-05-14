@@ -3,6 +3,7 @@ import { inter, cormorant, jetbrains } from "@/lib/fonts";
 import { baseMetadata } from "@/lib/seo";
 import { cn } from "@/lib/cn";
 import { Providers } from "./providers";
+import { StructuredData } from "@/components/seo/StructuredData";
 import "./globals.css";
 
 export const metadata: Metadata = baseMetadata;
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <body className="min-h-dvh font-sans antialiased grain">
+        <StructuredData />
         <Providers>{children}</Providers>
       </body>
     </html>
