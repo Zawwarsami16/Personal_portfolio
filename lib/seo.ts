@@ -5,42 +5,64 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://zawwarsami.com";
 export const baseMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Zawwar Sami — Full-Stack Engineer",
+    default: "Zawwar Sami — Engineer, Builder · Founder of Anteroom Studio",
     template: "%s · Zawwar Sami",
   },
   description:
-    "Engineer and builder of ZAI. Founder of Anteroom Studio. Building AI systems for markets, geopolitics, and the macro forces that shape the world.",
+    "Zawwar Sami is an independent engineer and builder in Mississauga, Canada. Founder of Anteroom Studio. Builds AI systems for markets, geopolitics, and macro intelligence.",
   applicationName: "Zawwar Sami",
-  authors: [{ name: "Zawwar Sami" }],
+  authors: [{ name: "Zawwar Sami", url: SITE_URL }],
   creator: "Zawwar Sami",
+  publisher: "Zawwar Sami",
   keywords: [
     "Zawwar Sami",
+    "Zawwarsami",
+    "Zawwar Sami Mississauga",
+    "Zawwar Sami engineer",
+    "Zawwar Sami AI",
     "Anteroom Studio",
+    "Anteroom Oracle",
     "ZAI",
-    "engineer",
-    "AI",
+    "AI engineer",
     "macro markets",
-    "Mississauga",
-    "Canada",
+    "geopolitical AI",
+    "Mississauga engineer",
+    "Canadian AI builder",
     "Next.js",
     "TypeScript",
-    "portfolio",
+    "Python",
+    "multi-agent systems",
   ],
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
     type: "website",
     siteName: "Zawwar Sami",
-    title: "Zawwar Sami — Full-Stack Engineer",
-    description: "Building thoughtful digital systems.",
+    title: "Zawwar Sami — Engineer, Builder · Founder of Anteroom Studio",
+    description:
+      "Independent engineer in Mississauga, Canada. Founder of Anteroom Studio. Builds AI systems for markets, geopolitics, and macro intelligence.",
     url: SITE_URL,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zawwar Sami — Full-Stack Engineer",
-    description: "Building thoughtful digital systems.",
+    title: "Zawwar Sami — Engineer, Builder · Founder of Anteroom Studio",
+    description:
+      "Independent engineer in Mississauga, Canada. Builds AI systems for markets, geopolitics, and macro intelligence.",
     creator: "@Kh4nZawwar",
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export function pageMetadata(title: string, description?: string): Metadata {
