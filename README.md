@@ -2,7 +2,7 @@
 
 My personal site — work, writing, and the projects I'm building under [Anteroom Studio](https://github.com/anteroom-studio).
 
-**Live: [zawwarsami](zawwarsami.com)**
+**Live: [zawwarsami.com](https://zawwarsami.com/)**
 
 ## Run it locally
 
