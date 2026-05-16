@@ -26,15 +26,14 @@ export function CoordinatesHUD({ compact = false }: { compact?: boolean }) {
     <div className="font-mono text-[10px] tracking-[0.2em] text-[var(--color-muted)] uppercase">
       <div className="flex items-center gap-2">
         <span className="text-[var(--color-accent)]">◉</span>
-        <span>{site.location.coords}</span>
+        <span>{site.location.label}</span>
+        {!compact && (
+          <>
+            <span className="text-[var(--color-muted-dim)]">/</span>
+            <span suppressHydrationWarning>{time || "--:--:--"}</span>
+          </>
+        )}
       </div>
-      {!compact && (
-        <div className="mt-1 flex items-center gap-2 pl-4">
-          <span>{site.location.label}</span>
-          <span className="text-[var(--color-muted-dim)]">/</span>
-          <span suppressHydrationWarning>{time || "--:--:--"}</span>
-        </div>
-      )}
     </div>
   );
 }

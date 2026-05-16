@@ -24,8 +24,6 @@ export function StructuredData() {
         nationality: "Canadian",
         address: {
           "@type": "PostalAddress",
-          addressLocality: site.location.city,
-          addressRegion: site.location.region,
           addressCountry: site.location.country,
         },
         worksFor: { "@id": ORG_ID },
@@ -68,7 +66,7 @@ export function StructuredData() {
         url: SITE_URL,
         name: "Zawwar Sami",
         description:
-          "Engineer and builder. Founder of Anteroom Studio. Mississauga, Canada.",
+          "Engineer and builder. Founder of Anteroom Studio. Based in Canada.",
         inLanguage: "en",
         publisher: { "@id": PERSON_ID },
       },

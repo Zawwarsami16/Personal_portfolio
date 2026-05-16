@@ -9,7 +9,7 @@ export const baseMetadata: Metadata = {
     template: "%s · Zawwar Sami",
   },
   description:
-    "Zawwar Sami is an independent engineer and builder in Mississauga, Canada. Founder of Anteroom Studio. Builds AI systems for markets, geopolitics, and macro intelligence.",
+    "Zawwar Sami is an independent engineer and builder based in Canada. Founder of Anteroom Studio. Builds AI systems for markets, geopolitics, and macro intelligence.",
   applicationName: "Zawwar Sami",
   authors: [{ name: "Zawwar Sami", url: SITE_URL }],
   creator: "Zawwar Sami",
@@ -17,7 +17,6 @@ export const baseMetadata: Metadata = {
   keywords: [
     "Zawwar Sami",
     "Zawwarsami",
-    "Zawwar Sami Mississauga",
     "Zawwar Sami engineer",
     "Zawwar Sami AI",
     "Anteroom Studio",
@@ -26,7 +25,6 @@ export const baseMetadata: Metadata = {
     "AI engineer",
     "macro markets",
     "geopolitical AI",
-    "Mississauga engineer",
     "Canadian AI builder",
     "Next.js",
     "TypeScript",
@@ -41,7 +39,7 @@ export const baseMetadata: Metadata = {
     siteName: "Zawwar Sami",
     title: "Zawwar Sami — Engineer, Builder · Founder of Anteroom Studio",
     description:
-      "Independent engineer in Mississauga, Canada. Founder of Anteroom Studio. Builds AI systems for markets, geopolitics, and macro intelligence.",
+      "Independent engineer based in Canada. Founder of Anteroom Studio. Builds AI systems for markets, geopolitics, and macro intelligence.",
     url: SITE_URL,
     locale: "en_US",
   },
@@ -49,7 +47,7 @@ export const baseMetadata: Metadata = {
     card: "summary_large_image",
     title: "Zawwar Sami — Engineer, Builder · Founder of Anteroom Studio",
     description:
-      "Independent engineer in Mississauga, Canada. Builds AI systems for markets, geopolitics, and macro intelligence.",
+      "Independent engineer based in Canada. Builds AI systems for markets, geopolitics, and macro intelligence.",
     creator: "@Kh4nZawwar",
   },
   robots: {

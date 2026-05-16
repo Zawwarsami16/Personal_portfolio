@@ -26,12 +26,9 @@ export function Footer() {
                 {site.email}
               </a>
             </FooterColumn>
-            <FooterColumn icon={<MapPin className="h-3.5 w-3.5" />} label="Location">
+            <FooterColumn icon={<MapPin className="h-3.5 w-3.5" />} label="Based in">
               <p className="font-serif text-2xl text-[var(--color-fg)]">
                 {site.location.label}
-              </p>
-              <p className="mt-1 font-mono text-[10px] tracking-[0.2em] text-[var(--color-muted)]">
-                {site.location.coords}
               </p>
             </FooterColumn>
             <FooterColumn icon={<CircleDot className="h-3.5 w-3.5" />} label="Availability">

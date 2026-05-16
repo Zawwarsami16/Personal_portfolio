@@ -73,7 +73,7 @@ export default function OG() {
           }}
         >
           <span>Engineer · Builder of ZAI</span>
-          <span>Mississauga · Canada</span>
+          <span>Canada</span>
         </div>
       </div>
     ),

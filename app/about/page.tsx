@@ -8,11 +8,11 @@ import { Tag } from "@/components/ui/Pill";
 
 export const metadata: Metadata = pageMetadata(
   "About",
-  "About Zawwar Sami — engineer and builder of ZAI. Founder of Anteroom Studio in Mississauga, Canada.",
+  "About Zawwar Sami — engineer and builder of ZAI. Founder of Anteroom Studio.",
 );
 
 const facts: { label: string; value: string }[] = [
-  { label: "Based in", value: "Mississauga, Canada" },
+  { label: "Based in", value: "Canada" },
   { label: "Studio", value: "Anteroom · founded 2019" },
   { label: "Building", value: "ZAI" },
   { label: "Open to", value: "AI, markets, contract" },

@@ -4,13 +4,8 @@ export const site = {
   role: "Engineer · Builder of ZAI",
   email: "zawwarsami16@gmail.com",
   location: {
-    city: "Mississauga",
-    region: "Ontario",
     country: "Canada",
-    label: "Mississauga, Canada",
-    coords: "43.5890° N, 79.6441° W",
-    lat: 43.589,
-    lng: -79.6441,
+    label: "Canada",
     timezone: "America/Toronto",
   },
   studio: {

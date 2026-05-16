@@ -56,9 +56,6 @@ export default function ContactPage() {
                     <p className="font-serif text-2xl text-[var(--color-fg)]">
                       {site.location.label}
                     </p>
-                    <p className="mt-1 font-mono text-[10px] tracking-[0.25em] text-[var(--color-muted)] uppercase">
-                      {site.location.coords}
-                    </p>
                   </div>
                 </div>
                 <div className="pt-2">
