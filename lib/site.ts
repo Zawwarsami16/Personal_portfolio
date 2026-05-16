@@ -26,6 +26,7 @@ export const site = {
     twitter: "https://twitter.com/Kh4nZawwar",
     substack: "https://substack.com/@zawwarsami",
     htb: "https://app.hackthebox.com/public/users/2469522",
+    htbProgress: "https://github.com/Zawwarsami16/htb-progress",
   },
   nav: [
     { label: "About", href: "/about" },
