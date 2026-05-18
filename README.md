@@ -1,4 +1,16 @@
-# Personal portfolio
+<div align="center">
+  <a href="https://github.com/Zawwarsami16">
+    <img src="https://raw.githubusercontent.com/Zawwarsami16/Zawwarsami16/main/assets/studio-mark.svg" alt="part of the Anteroom Studio surface · github.com/Zawwarsami16" width="900" height="56" style="max-width:100%"/>
+  </a>
+</div>
+
+# engineering-portfolio
+
+[![License](https://img.shields.io/badge/License-MIT-ff003c?style=flat-square&labelColor=0a0a0a)](LICENSE)
+[![Next.js](https://img.shields.io/badge/next.js-16-ff003c?style=flat-square&logo=nextdotjs&logoColor=ff003c&labelColor=0a0a0a)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/react-19-ff003c?style=flat-square&logo=react&logoColor=ff003c&labelColor=0a0a0a)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/typescript-ff003c?style=flat-square&logo=typescript&logoColor=ff003c&labelColor=0a0a0a)](https://www.typescriptlang.org/)
+[![Live](https://img.shields.io/badge/live-zawwarsami.com-ff003c?style=flat-square&labelColor=0a0a0a)](https://zawwarsami.com)
 
 My personal site — work, writing, and the projects I'm building under [Anteroom Studio](https://github.com/anteroom-studio).
 
