@@ -49,6 +49,7 @@ export const baseMetadata: Metadata = {
     description:
       "Independent engineer based in Canada. Builds AI systems for markets, geopolitics, and macro intelligence.",
     creator: "@Kh4nZawwar",
+    site: "@Kh4nZawwar",
   },
   robots: {
     index: true,
@@ -60,6 +61,16 @@ export const baseMetadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  category: "Technology",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+    other: {
+      "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION ?? "",
+    },
+  },
+  other: {
+    "google-site-verification": process.env.NEXT_PUBLIC_GSC_VERIFICATION ?? "",
   },
 };
 
